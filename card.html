@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=1100, initial-scale=0.1">
+    <meta charset="utf-8">
+    <meta name="Description" content="{{title}}">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{title}}">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:image" content="{{img_url}}">
+    <meta property="og:url" content="http://31.186.100.13/samsebe/card.php?{{url}}">
+    <title>{{title}}</title>
+    <link rel="image_src" href="{{img_url}}">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- Заголовок и вступительное слово -->
+<div class="container">
+    <header>
+        <h1>Народный депутат <small>/ Добейся прозрачных тарифов ЖКХ</small></h1>
+    </header>
+</div>
+<!-- / конец заголовка -->
+
+<div class="card">
+    <img src="card.php?{{params}}" width="460" height="280" alt="Народный депутат">
+    <div>
+        <h3>Спасибо, вы восхитительны!</h3>
+        <div class="row">
+            <div class="col-xs-6 text-center" style="margin: 0; padding: 0 0 0 0; max-width: 190px"><p>Поделиться с друзьями:</p></div>
+            <div class="col-xs-6" style="margin: 0; padding: 0;">
+                <ul class="list-inline">
+                    <li>
+                        <a href="#" onclick="Share.twitter('{{base_url}}','{{title}}')">
+                            <i class="icon-twitter-bird"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="Share.facebook('{{base_url}}','{{title}}','{{img_url}}','{{description}}')">
+                            <i class="icon-facebook-rect"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="Share.vkontakte('{{base_url}}','{{title}}','{{img_url}}','{{description}}')">
+                            <i class="icon-vkontakte-rect"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="Share.odnoklassniki('{{base_url}}','{{description}}')">
+                            <i class="icon-odnoklassniki-rect"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="Share.mailru('{{base_url}}','{{title}}','{{img_url}}','{{description}}')">
+                            <i class="icon-at"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="index.html">← Вернуться на главную</a>
+    </div>
+</div>
+
+<div class="card-footer">
+    <div class="container">
+        <footer>
+            <div class="row">
+                <div class="col-xs-8">
+                    <p>Наши проекты:</p>
+                    <div>
+                        <a href="http://rospil.info/">РосПил</a> /
+                        <a href="http://rosvybory.org/">РосВыборы</a> /
+                        <a href="http://rosyama.ru/">РосЯма</a> /
+                        <a href="http://roszkh.ru/">РосЖКХ</a> /
+                        <a href="http://www.mashina.org/">ДМП</a> /
+                        <a href="http://navalny.ru/roi/">Закон</a>
+                    </div>
+                </div>
+                <div class="col-xs-4 copyright">
+                    <p>Сделано в:</p>
+                    <a href="http://chemeris.me/" class="brand">INTERFACES.</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script src="assets/js/jquery-1.10.2.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+    Share = {
+        vkontakte: function(purl, ptitle, pimg, text) {
+            url  = 'http://vkontakte.ru/share.php?';
+            url += 'url='          + encodeURIComponent(purl);
+            url += '&title='       + encodeURIComponent(ptitle);
+            url += '&description=' + encodeURIComponent(text);
+            url += '&image='       + encodeURIComponent(pimg);
+            url += '&noparse=true';
+            Share.popup(url);
+        },
+        odnoklassniki: function(purl, text) {
+            url  = 'http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1';
+            url += '&st.comments=' + encodeURIComponent(text);
+            url += '&st._surl='    + encodeURIComponent(purl);
+            Share.popup(url);
+        },
+        facebook: function(purl, ptitle, pimg, text) {
+            url  = 'http://www.facebook.com/sharer.php?s=100';
+            url += '&p[title]='     + encodeURIComponent(ptitle);
+            url += '&p[summary]='   + encodeURIComponent(text);
+            url += '&p[url]='       + encodeURIComponent(purl);
+            url += '&p[images][0]=' + encodeURIComponent(pimg);
+            Share.popup(url);
+        },
+        twitter: function(purl, ptitle) {
+            url  = 'http://twitter.com/share?';
+            url += 'text='      + encodeURIComponent(ptitle);
+            url += '&url='      + encodeURIComponent(purl);
+            url += '&counturl=' + encodeURIComponent(purl);
+            Share.popup(url);
+        },
+        mailru: function(purl, ptitle, pimg, text) {
+            url  = 'http://connect.mail.ru/share?';
+            url += 'url='          + encodeURIComponent(purl);
+            url += '&title='       + encodeURIComponent(ptitle);
+            url += '&description=' + encodeURIComponent(text);
+            url += '&imageurl='    + encodeURIComponent(pimg);
+            Share.popup(url)
+        },
+
+        popup: function(url) {
+            window.open(url,'','toolbar=0,status=0,width=626,height=436');
+            return false;
+        }
+    };
+</script>
+
+</body>
+</html>

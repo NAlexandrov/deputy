@@ -81,7 +81,7 @@ h1 {
 }
 
 h1 small {
-    font-size: 32px;
+    font-size: 27px;
     font-weight: 500;
     color: #fe7171;
 }
@@ -102,6 +102,7 @@ header > h1 {
     text-align: center;
     margin: 0;
     padding: 0 0 25px 0;
+    white-space: nowrap;
 }
 
 header p {
@@ -386,7 +387,7 @@ footer a:hover, footer a:active {
 }
 
 footer .copyright {
-    margin-top: 2px;
+    margin-top: 15px;
     height: 45px;
 }
 
@@ -395,25 +396,21 @@ footer .copyright p {
     font-size: 14px;
 }
 
-footer .copyright .brand {
-    font-size: 18px;
+footer .copyright a:link, footer .copyright a:visited {
+    border-bottom: 1px solid #ffffff;
+    letter-spacing: -1px;
 }
 
-footer .copyright a {
+footer .copyright a:hover, footer .copyright a:active {
     border-bottom: none;
-    letter-spacing: -1px;
 }
 
 /*** card ***/
 
 .card {
-    top: 50%;
-    left: 50%;
     width: 460px;
-    height: 440px;
-    margin-left: -230px;
-    margin-top: -220px;
-    position: absolute;
+    height: 490px;
+    margin: 50px auto;
 }
 
 .card h3 {
@@ -456,8 +453,8 @@ footer .copyright a {
 .card-footer {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    margin-left: -550px;
+    left: 0;
+    width: 100%;
 }
 
 /*** FONTS ***/

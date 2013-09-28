@@ -181,6 +181,16 @@ header p {
     text-transform: uppercase;
 }
 
+.intro a:link, .intro a:visited {
+    color: #fe7171;
+    text-decoration: none;
+    border-bottom: 1px solid #fe7171;
+}
+
+.intro a:hover, .intro a:active {
+    border-bottom: none;
+}
+
 .questions > div {
     background-color: #ffffff;
     opacity: 0.9;

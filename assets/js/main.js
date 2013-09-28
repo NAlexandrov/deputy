@@ -5,6 +5,9 @@ $(document).ready(function() {
         $(this).parent().parent().children('.more').toggle();
     });
 
+    $('#field_43096796').mask('+7 (999) 999-9999');
+    $('#field_43550358').mask('+7 (999) 999-9999');
+
     /* Валидация форм */
     $("#form1").validate({
         messages: {

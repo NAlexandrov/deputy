@@ -349,6 +349,12 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     height: 30px;
 }
 
+.checkbox label {
+    font-family: "myriad_pro";
+    font-weight: normal;
+    font-size: 12px;
+}
+
 /*** .share ***/
 
 .share {

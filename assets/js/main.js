@@ -8,6 +8,10 @@ $(document).ready(function() {
     $('#field_43096796').mask('+7 (999) 999-9999');
     $('#field_43550358').mask('+7 (999) 999-9999');
 
+    $('input[type="checkbox"]').on('click', function() {
+        $(this).parent().parent().parent().find('button').toggleClass('disabled');
+    });
+
     /* Валидация форм */
     $("#form1").validate({
         messages: {

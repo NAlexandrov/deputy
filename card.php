@@ -2,7 +2,7 @@
 
 $title = 'НАРОДНЫЙ ДЕПУТАТ / Добейся прозрачных тарифов ЖКХ';
 $description = 'Мы привыкли, что законы принимаются без нашего участия. Пришло время это изменить.';
-$base_url = 'http://31.186.100.13/samsebe/';
+$base_url = 'http://deputat.fbk.info/';
 
 mb_internal_encoding("UTF-8");
 mb_regex_encoding("UTF-8");

@@ -9,7 +9,7 @@ mb_regex_encoding("UTF-8");
 setlocale(LC_ALL, "ru_RU.UTF-8");
 
 // хак для facebook'a
-if ( !mb_strpos($_SERVER["HTTP_REFERER"], 'samsebe') ) {
+if ( !mb_strpos($_SERVER["HTTP_REFERER"], 'deputat') ) {
     if ( !preg_match('/^FacebookExternalHit\/.*?/i', $_SERVER['HTTP_USER_AGENT']) ){
         header('Location: index.html');
         exit;

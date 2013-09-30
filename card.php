@@ -9,12 +9,12 @@ mb_regex_encoding("UTF-8");
 setlocale(LC_ALL, "ru_RU.UTF-8");
 
 // хак для facebook'a
-if ( !mb_strpos($_SERVER["HTTP_REFERER"], 'deputat') ) {
+/*if ( !mb_strpos($_SERVER["HTTP_REFERER"], 'deputat') ) {
     if ( !preg_match('/^FacebookExternalHit\/.*?/i', $_SERVER['HTTP_USER_AGENT']) ){
         header('Location: index.html');
         exit;
     }
-}
+}*/
 
 // Просто проверка )
 if ( !isset($_REQUEST['name']) && !isset($_REQUEST['email']) && !isset($_REQUEST['phone'])) exit;
@@ -51,15 +51,18 @@ if ( isset($_REQUEST['type']) ) {
 
     $color = imagecolorallocate($img, 73, 73, 73);
 
-    imagettftext($img, 14, 8, 72, 105, $color, $font_redring, $user_fname);
-    imagettftext($img, 14, 8, 75, 125, $color, $font_redring, $user_sname);
+    $user_phone = '+7 (495) 2-300-400';
+    $user_email = 'deputat@fbk.info';
+    
+    imagettftext($img, 18, 5, 83, 100, $color, $font_redring, $user_fname);
+    imagettftext($img, 18, 5, 87, 125, $color, $font_redring, $user_sname);
 
-    if ( mb_strlen($user_fname) + mb_strlen($user_sname) > 18 ) {
-        imagettftext($img, 11, 8, 83, 185, $color, $font_myriad, $user_phone);
-        imagettftext($img, 11, 8, 86, 205, $color, $font_myriad, $user_email);
+    if ( ( mb_strlen($user_fname) + mb_strlen($user_sname) > 26 ) || mb_strlen($user_fname) > 13 || mb_strlen($user_sname) > 13 ) {
+        imagettftext($img, 11, 5, 92, 190, $color, $font_myriad, $user_phone);
+        imagettftext($img, 11, 5, 95, 210, $color, $font_myriad, $user_email);
     } else {
-        imagettftext($img, 11, 8, 220, 83, $color, $font_myriad, $user_phone);
-        imagettftext($img, 11, 8, 225, 102, $color, $font_myriad, $user_email);
+        imagettftext($img, 11, 5, 340, 78, $color, $font_myriad, $user_phone);
+        imagettftext($img, 11, 5, 345, 98, $color, $font_myriad, $user_email);
     }
 
     imagepng($img);

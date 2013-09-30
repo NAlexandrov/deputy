@@ -152,10 +152,10 @@ header p {
 .intro > div {
     background-color: #ffffff;
     opacity: 0.9;
-    margin: 25px 25px 0 50px;
-    padding: 20px 10px 10px 20px;
-    width: 290px;
-    max-width: 290px;
+    margin: 25px 25px 0 40px;
+    padding: 20px 20px 10px 20px;
+    width: 300px;
+    max-width: 300px;
 }
 
 .intro p:first-child {
@@ -425,7 +425,7 @@ footer a:hover, footer a:active {
 }
 
 footer .copyright {
-    margin-top: 15px;
+    margin-top: 25px;
     height: 45px;
 }
 

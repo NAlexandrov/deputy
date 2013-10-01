@@ -23,7 +23,7 @@ if ( !isset($_REQUEST['name']) && !isset($_REQUEST['email']) && !isset($_REQUEST
 $user = str_replace('_', ' ', trim($_REQUEST['name']));
 $user = str_replace('+', ' ', $user);
 $user = preg_replace('/[\s]{2,}/', ' ', $user);
-$user = mb_ereg_replace('[^a-яА-Яa-zA-Z\s]+','', $user);
+$user = mb_ereg_replace('[^a-яёА-ЯЁa-zA-Z\s]+','', $user);
 $user = explode(' ', $user);
 $user_fname = ( isset($user[0]) ? $user[0] : '' );
 $user_sname = ( isset($user[1]) ? $user[1] : '' );

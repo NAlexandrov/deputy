@@ -9,18 +9,15 @@ mb_regex_encoding("UTF-8");
 setlocale(LC_ALL, "ru_RU.UTF-8");
 
 // хак для facebook'a
-/*if ( !mb_strpos($_SERVER["HTTP_REFERER"], 'deputat') ) {
+if ( !mb_strpos($_SERVER["HTTP_REFERER"], 'deputat') ) {
     if ( !preg_match('/^FacebookExternalHit\/.*?/i', $_SERVER['HTTP_USER_AGENT']) ){
         header('Location: index.html');
         exit;
     }
-}*/
+}
 
 // Просто проверка )
-if ( !isset($_REQUEST['name']) && !isset($_REQUEST['email']) && !isset($_REQUEST['phone'])) {
-    header('Location: index.html');
-    exit;
-}
+if ( !isset($_REQUEST['name']) && !isset($_REQUEST['email']) && !isset($_REQUEST['phone'])) exit;
 
 // Чистим входящие данных от злобных хакеров
 $user = str_replace('_', ' ', trim($_REQUEST['name']));

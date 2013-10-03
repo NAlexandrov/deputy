@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=1100, initial-scale=0.1">
+    <meta id="viewport" name="viewport">
+    <script>
+    (function(doc) {
+        var viewport = document.getElementById('viewport');
+        if ( navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
+            doc.getElementById("viewport").setAttribute("content", "initial-scale=0.3");
+        } else if ( navigator.userAgent.match(/iPad/i) ) {
+            doc.getElementById("viewport").setAttribute("content", "initial-scale=0.8");
+        }
+    }(document));
+    </script>
     <meta charset="utf-8">
     <meta name="Description" content="Услуги ЖКХ нам поставляют монополисты, которые не привыкли отчитываться перед горожанами. Новый законопроект заставит их обосновать свои цены.">
     <meta property="og:description" content="Услуги ЖКХ нам поставляют монополисты, которые не привыкли отчитываться перед горожанами. Новый законопроект заставит их обосновать свои цены.">
@@ -36,7 +46,7 @@
 </div>
 <!-- / конец заголовка -->
 
-<!-- Блок с картинкок -->
+<!-- Блок с картинкой -->
 <div class="about">
     <div class="container">
         <div class="row">

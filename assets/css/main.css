@@ -447,7 +447,7 @@ footer .copyright a:hover, footer .copyright a:active {
 
 .card {
     width: 560px;
-    height: 490px;
+/*    height: 490px;*/
     margin: 50px auto;
 }
 
@@ -489,7 +489,7 @@ footer .copyright a:hover, footer .copyright a:active {
 }
 
 .card-footer {
-    position: absolute;
+/*    position: absolute;*/
     bottom: 0;
     left: 0;
     width: 100%;

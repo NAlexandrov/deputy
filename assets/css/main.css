@@ -533,3 +533,34 @@ footer .copyright a:hover, footer .copyright a:active {
 .icon-twitter-bird:before { content: '\e802'; } /* '' */
 .icon-vkontakte-rect:before { content: '\e803'; } /* '' */
 .icon-odnoklassniki-rect:before { content: '\e800'; } /* '' */
+
+header a, header a:hover, header a:active {
+    text-decoration: none;
+}
+
+#revenge {
+    background-color: #ff6d6d;
+    width: 600px;
+    margin: 30px auto 0;
+    position: relative;
+}
+
+#revenge > .wrapper {
+    color: #ffffff;
+    padding: 10px 30px 30px 30px;
+}
+
+#revenge .text {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'red_ring';
+}
+
+#revenge .arrow {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 50px;
+    color: #ffffff;
+    font-family: Georgia, Times New Roman, Times, serif;
+}

@@ -98,7 +98,7 @@ $( document ).ready(function() {
 
     $("a[href=#make]").fancybox({
         maxWidth	: 550,
-        maxHeight	: 810,
+        maxHeight	: 720,
         fitToView	: false,
         width		: '90%',
         height		: '98%',

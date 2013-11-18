@@ -105,4 +105,9 @@ $( document ).ready(function() {
         autoSize	: false,
         closeClick	: false
     });
+
+    $('a[href=#donation]').on('click', function(e) {
+        e.preventDefault();
+        $('#donation form').submit();
+    })
 });

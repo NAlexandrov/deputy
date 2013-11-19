@@ -107,7 +107,7 @@ $( document ).ready(function() {
     });
 
     $("a[href=#showDonation]").fancybox({
-        maxWidth	: 300,
+        maxWidth	: 505,
         maxHeight	: 500,
         fitToView	: false,
         width		: '90%',
@@ -118,6 +118,9 @@ $( document ).ready(function() {
 
     $('a[href=#donation]').on('click', function(e) {
         e.preventDefault();
-        $('#donation form').submit();
+
+        $('#donation form').submit(function (e) {
+            dataLayer.push({'DonationSum': $('#robosum').val()});
+        });
     })
 });

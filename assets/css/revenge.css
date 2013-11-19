@@ -193,9 +193,6 @@ header h2 {
     padding-top: 50px;
 }
 
-#donation {
-    width: 300px;
-}
 
 #donation > div {
     padding-top: 30px;
@@ -307,9 +304,10 @@ div.placeholder span {
 
 #offer label > div.text {
     margin-top: 3px;
-    margin-left: 25px;
-    width: 220px;
+    margin-left: 22px;
     line-height: 13px;
+    white-space: nowrap;
+    font-size: 10px;
 }
 
 .offerta {
@@ -327,7 +325,7 @@ div.placeholder span {
 }
 
 .offerta-text {
-    height: 180px;
+    height: 200px;
     overflow: auto;
 }
 

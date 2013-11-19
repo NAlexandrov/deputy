@@ -148,6 +148,10 @@ header {
     padding-top: 60px;
 }
 
+header > .container {
+    position: relative;
+}
+
 header h1 {
     font-size: 40px;
     border-bottom: 1px solid #d2d0d0;
@@ -173,18 +177,24 @@ header h2 {
     font-family: 'myriad_pro_cond';
     font-weight: 300;
     font-style: normal;
+    line-height: 50px;
 }
 
 #bg {
     background: transparent url('../img/bg.jpg') no-repeat bottom center;
     background-size: 100%;
     min-width: 1100px;
-    padding-top: 22px;
+    height: 500px;
+}
+
+#bg > div.wrap {
+    width: 660px;
+    margin: 0 auto;
+    padding-top: 50px;
 }
 
 #donation {
     width: 300px;
-    background-color: rgba(255,255,255,0.8);
 }
 
 #donation > div {
@@ -317,7 +327,7 @@ div.placeholder span {
 }
 
 .offerta-text {
-    height: 120px;
+    height: 180px;
     overflow: auto;
 }
 
@@ -328,6 +338,7 @@ div.placeholder span {
     width: 11px;
     height: 11px;
     cursor: pointer;
+    display: none;
 }
 
 #revenge {

@@ -106,6 +106,16 @@ $( document ).ready(function() {
         closeClick	: false
     });
 
+    $("a[href=#showDonation]").fancybox({
+        maxWidth	: 300,
+        maxHeight	: 500,
+        fitToView	: false,
+        width		: '90%',
+        height		: '98%',
+        autoSize	: false,
+        closeClick	: false
+    });
+
     $('a[href=#donation]').on('click', function(e) {
         e.preventDefault();
         $('#donation form').submit();

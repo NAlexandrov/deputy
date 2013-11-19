@@ -35,33 +35,7 @@
 
     <div id="main">
         <div id="bg">
-<<<<<<< HEAD
-            <div class="container_24">
-                <div class="clear"></div>
-                <div class="grid_8">
-                    <section id="donation">
-                        <div class="form">
-                            <form id="roboform" action="http://auth.robokassa.ru:80/Merchant/Index.aspx" method="post" target="_blank">
-                                <input name="MrchLogin" type="hidden" value="fbk">
-                                <input name="Desc" type="hidden" value="Пожертвование на уставную деятельность Фонда борьбы с коррупцией">
-                                <input name="SignatureValue" type="hidden" value="43c95f480b1a122216cf3bf29c67da42">
-                                <input name="shp_Project" type="hidden" value="FBK">
-                                <input name="IncCurrLabel" type="hidden" value="BANKOCEAN2R">
-                                <h3>ПОДДЕРЖАТЬ ФОНД</h3>
-                                <div class="clear">&nbsp;</div>
-                                <div class="grid_4">
-                                    <div class="placeholder">
-                                        <input type="text" value="1000" style="padding-left: 11px; width: 162px" name="FreeOutSum">
-                                        <span>Руб.</span>
-                                    </div>
-                                    <div><a href="#donation" class="btn" type="submit"><span>ПЕРЕВЕСТИ</span></a></div>
-                                </div>
-                                <div class="grid_1" style="margin-left: 15px">
-                                    <img src="../assets/img/mvy.png" width="40" height="75" alt="" style="margin-top: 2px">
-                                </div>
-                                <div class="clear">&nbsp;</div>
-                                <div id="offer">
-=======
+
             <div class="wrap">
                 <section id="revenge">
                     <div>
@@ -71,7 +45,6 @@
                             <div class="clear">&nbsp;</div>
                             <div class="grid_4 prefix_2">
                                 <div>
->>>>>>> 2d9f09be5e4bbc22c13d3672e5cb3dff4187be09
                                     <label>
                                         <span>Выберите район <sup>*</sup></span>
                                         <select id="regions"></select>
@@ -118,7 +91,7 @@
 <div id="showDonation" style="display: none">
 <section id="donation">
     <div class="form">
-        <form action="http://auth.robokassa.ru:80/Merchant/Index.aspx" method="post" target="_blank">
+        <form action="http://auth.robokassa.ru:80/Merchant/Index.aspx" method="post" target="_blank" id="roboform">
             <input name="MrchLogin" type="hidden" value="fbk">
             <input name="Desc" type="hidden" value="Пожертвование на уставную деятельность Фонда борьбы с коррупцией">
             <input name="SignatureValue" type="hidden" value="43c95f480b1a122216cf3bf29c67da42">
@@ -128,7 +101,7 @@
             <div class="clear">&nbsp;</div>
             <div class="grid_4">
                 <div class="placeholder">
-                    <input type="text" value="1000" style="padding-left: 11px; width: 162px" name="FreeOutSum">
+                    <input type="text" value="1000" id="robosum" style="padding-left: 11px; width: 162px" name="FreeOutSum">
                     <span>Руб.</span>
                 </div>
                 <div><a href="#donation" class="btn" type="submit"><span>ПЕРЕВЕСТИ</span></a></div>

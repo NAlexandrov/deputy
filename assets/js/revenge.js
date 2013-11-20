@@ -116,9 +116,8 @@ $( document ).ready(function() {
         closeClick	: false
     });
 
-    $('a[href=#donation]').on('click', function(e) {
-        $('#donation form').submit();
-        e.preventDefault();
+
+    $('#donation form').submit(function() {
         dataLayer.push({'DonationSum': $('#robosum').val()});
-    })
+    });
 });
